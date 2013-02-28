@@ -60,7 +60,7 @@ module Spree
           :tic       => Spree::Config.taxcloud_product_tic, 
           :sku       => line_item.variant.sku.presence || line_item.variant.id,
           :quantity  => line_item.quantity,
-          :price     => line_item.price.to_f,
+          :price     => line_item.variant.product.price.to_f,
           :line_item => line_item
         })
 	    end
